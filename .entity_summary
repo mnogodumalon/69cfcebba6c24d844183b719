@@ -1,0 +1,10 @@
+- Produktverwaltung (produktverwaltung): produkt_name[string/text], marke[string/text], modell[string/text], seriennummer[string/text], kategorie[lookup/select], kaufpreis[number], kaufdatum[date/date], haendler[string/text], garantiedauer_monate[number], erwartete_lebensdauer_hersteller[number], realistische_lebensdauer[number], produktfoto[file], notizen_produkt[string/textarea]
+- Ersatzteilpreise (ersatzteilpreise): produkt_referenz_et[applookup/select], ersatzteil_name[string/text], teilenummer[string/text], ersatzteil_preis[number], verfuegbarkeit[lookup/radio], ersatzteil_quelle[string/text], ersatzteil_url[string/url], preiserhebung_datum[date/date], notizen_ersatzteil[string/textarea]
+  → produkt_referenz_et links to app_id 69cfce9261b99eaf5d9c387c
+- Reparatur & Wartung (reparatur_&_wartung): produkt_referenz_rw[applookup/select], eintragsart[lookup/radio], ereignis_datum[date/date], beschreibung_reparatur[string/textarea], kosten_reparatur[number], verwendete_ersatzteile[applookup/select], dienstleister[string/text], selbst_repariert[bool], naechster_wartungstermin[date/date], wartungsintervall_monate[number], notizen_reparatur[string/textarea]
+  → produkt_referenz_rw links to app_id 69cfce9261b99eaf5d9c387c
+  → verwendete_ersatzteile links to app_id 69cfce988e516fa818e648dd
+- Wiederverkaufswert (wiederverkaufswert): produkt_referenz_wvw[applookup/select], bewertungsdatum[date/date], wiederverkaufswert_eur[number], produktzustand[lookup/select], bewertungsquelle[lookup/select], plattform_url[string/url], notizen_wvw[string/textarea]
+  → produkt_referenz_wvw links to app_id 69cfce9261b99eaf5d9c387c
+- TCO-Bewertung (tco_bewertung): produkt_referenz_tco[applookup/select], bewertungsdatum_tco[date/date], nutzungsdauer_monate[number], gesamte_reparaturkosten[number], gesamte_ersatzteilkosten[number], aktueller_wiederverkaufswert[number], tco_gesamt[number], monatliche_kosten[number], neuanschaffungskosten[number], empfehlung[lookup/radio], nachhaltigkeitsbewertung[lookup/select], tco_notizen[string/textarea]
+  → produkt_referenz_tco links to app_id 69cfce9261b99eaf5d9c387c
